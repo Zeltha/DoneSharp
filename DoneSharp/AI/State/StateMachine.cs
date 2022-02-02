@@ -24,7 +24,7 @@ namespace DoneSharp.AI.State
                 _state = value;
 
                 _currentEnumerable = _stateHandlers[value](this).GetEnumerator();
-            }
+            } 
         }
 
         public StateMachine()
