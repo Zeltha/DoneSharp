@@ -52,6 +52,9 @@ namespace DemoExamples
             // Check if character is at destination
 
             yield return null;
+
+            // Return the state machine to the 'none' state.
+            stateMachine.State = MyStates.None;
         }
 
         internal enum MyStates
