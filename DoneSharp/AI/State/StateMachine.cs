@@ -10,7 +10,7 @@ namespace DoneSharp.AI.State
         public delegate IEnumerable StateMachineHandler(StateMachine<T> stateMachine);
         
         private T _state;
-
+        
         private readonly Dictionary<T, StateMachineHandler> _stateHandlers;
 
         private IEnumerator _currentEnumerable;
@@ -26,9 +26,13 @@ namespace DoneSharp.AI.State
                 _currentEnumerable = _stateHandlers[value](this).GetEnumerator();
             } 
         }
+        
+        public T DefaultState { get; set; }
 
-        public StateMachine()
+        public StateMachine(T defaultState = default)
         {
+            DefaultState = defaultState;
+            
             var values = GetEnumValues();
 
             _stateHandlers = new Dictionary<T, StateMachineHandler>();
@@ -41,6 +45,11 @@ namespace DoneSharp.AI.State
 
         public object Next()
         {
+            if (_currentEnumerable == null)
+            {
+                State = DefaultState;
+            }
+            
             _currentEnumerable?.MoveNext();
 
             return _currentEnumerable?.Current;

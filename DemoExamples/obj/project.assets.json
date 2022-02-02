@@ -1,0 +1,86 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "DoneSharp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/DoneSharp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DoneSharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DoneSharp/1.0.0": {
+      "type": "project",
+      "path": "../DoneSharp/DoneSharp.csproj",
+      "msbuildProject": "../DoneSharp/DoneSharp.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "DoneSharp >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Tom\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\Tom\\Documents\\PRojects\\DoneSharp\\DemoExamples\\DemoExamples.csproj",
+      "projectName": "DemoExamples",
+      "projectPath": "F:\\Tom\\Documents\\PRojects\\DoneSharp\\DemoExamples\\DemoExamples.csproj",
+      "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
+      "outputPath": "F:\\Tom\\Documents\\PRojects\\DoneSharp\\DemoExamples\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Tom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "F:\\Tom\\Documents\\PRojects\\DoneSharp\\DoneSharp\\DoneSharp.csproj": {
+              "projectPath": "F:\\Tom\\Documents\\PRojects\\DoneSharp\\DoneSharp\\DoneSharp.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.408\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
